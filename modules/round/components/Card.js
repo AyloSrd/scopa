@@ -5,6 +5,7 @@ export const Card = ( val, house, roundData ) => {
 
 	card.innerHTML = val.toString()
 	card.setAttribute('active', used)
+	card.classList.add('card')
 	card.addEventListener('click', () => {
 		roundData.result += cardValue
 		document.getElementById('result').innerHTML = roundData.result

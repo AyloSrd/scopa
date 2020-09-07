@@ -1,6 +1,7 @@
 import { Hand } from './components/Hand.js'
 import { cardCreator } from './hooks/cardCreator.js'
 import { cardsDealer } from './hooks/cardsDealer.js'
+import { Timer } from './components/Timer.js'
 
 const HOUSES_CARDS = 10
 const MAX_CARD_ABSOLUTE_VALUE = 20
@@ -16,6 +17,7 @@ const initialize = () => {
 	Hand(roundData)
 	cardsDealer(roundData)
 	document.querySelector('#value h1').innerHTML = roundData.playersHand
+	Timer()
 }
 
 initialize()
