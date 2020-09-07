@@ -5,19 +5,34 @@ let result = 0
 const housesValues = []
 let playersHand = 0
 
+const randomizer = (minNonInclusive, maxInclusive) => Math.round(Math.random()*(maxInclusive - minNonInclusive) + minNonInclusive)
+
 //funzione che crea le due mani (un solo array diviso a metà)
 const cardsDealer = () => {
 	for (let i = 0; i < HOUSES_CARDS*2; i++) {
-		let cardValue = Math.round(Math.random()*MAX_CARD_ABSOLUTE_VALUE)
+		let cardValue = randomizer(0, MAX_CARD_ABSOLUTE_VALUE)
 		housesValues.push(i < HOUSES_CARDS ? cardValue : -1*cardValue)
 	}	
 
-	housesValues.forEach(cardValue => Carta(cardValue, cardValue < 0 ? 'negative-house' : 'positive-house'))
+	housesValues.forEach(cardValue => Card(cardValue, cardValue < 0 ? 'negative-house' : 'positive-house'))
 }
 
-//funzione che prende un numero x fra 3 e 8, e sommi x numeri in quell'array, per trovare il banco 
+//funzione che prende un numero x fra 3 e 7, e sommi x numeri in quell'array, per trovare il banco 
+const Hand = house => {
+	let addends = house
+	const tempArr = []
+	const minNumberOfCards = randomizer(2, 7)
+	for(i = 0; i < minNumberOfCards; i++){
+		const k = randomizer(-1, addends.length - 1)
+		tempArr.push(addends[k])
+		addends.splice(k, 1)
+	}
+	playersHand = tempArr.reduce((acc, val) => acc + val, 0)
+	document.querySelector('#value h1').innerHTML = playersHand
+}
+
 //funzione che crea un singolo bottone carta
-const Carta = ( val, house ) => {
+const Card = ( val, house ) => {
 	let cardValue = val
 	let bottone = document.createElement('button')
 	let used = false
@@ -37,6 +52,7 @@ const Carta = ( val, house ) => {
 
 const startRound = () => {
 	cardsDealer()
+	Hand(housesValues)
 }
 	
 document.addEventListener('DOMContentLoaded', startRound(), false)
