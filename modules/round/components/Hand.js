@@ -5,7 +5,7 @@ export const Hand = (roundData) => {
 	const tempArr = []
 	const minNumberOfCards = randomizer(2, 7)
 	for(let i = 0; i < minNumberOfCards; i++){
-		const k = randomizer(-1, addends.length - 1)
+		const k = randomizer(0, addends.length - 1)
 		tempArr.push(addends[k])
 		addends.splice(k, 1)
 	}
