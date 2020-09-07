@@ -1,0 +1,1 @@
+export const randomizer = (minNonInclusive, maxInclusive) => Math.round(Math.random()*(maxInclusive - minNonInclusive) + minNonInclusive)

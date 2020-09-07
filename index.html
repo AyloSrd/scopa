@@ -6,23 +6,30 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
+		<title>Scopa</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="style.css">
+		<script src="./modules/round/components/Hand.js" type='module' defer></script>
+		<script src="./modules/round/hooks/randomizer.js" type='module' defer></script>
+		<script src="./modules/round/hooks/cardsDealer.js" type='module' defer></script>
+		<script src="./modules/round/hooks/cardCreator.js" type='module' defer></script>
+		<script src="./modules/round/components/Card.js" type='module' defer></script>
+		<script src="./modules/round/app.js" type='module' defer></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<div id="hand">
-			<div id="value">
-				<h1>?</h1>
-				<h3 id="result">?</h3>
+		<div id='round'>
+			<div id="hand">
+				<div id="value">
+					<h1>?</h1>
+					<h3 id="result">?</h3>
+				</div>
 			</div>
+			<div class="house" id="positive-house"></div>
+			<div class="house" id="negative-house"></div>
 		</div>
-		<div id="positive-house"></div>
-		<div id="negative-house"></div>
-		<script src="app.js" async defer></script>
 	</body>
 </html>
