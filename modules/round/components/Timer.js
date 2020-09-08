@@ -1,12 +1,15 @@
-export const Timer = () => {
-	let time = 0
-	const id = setInterval(() => {
-		if (time > 1000) {
-			clearInterval(id)
+export const Timer = roundData => {
+	roundData.intervalId = setInterval(() => {
+		if(roundData.hasFound) {
+			alert('you won')
+			clearInterval(roundData.intervalId)
 		}
-		document.getElementById('hand').style.background = `linear-gradient(0deg, #FA9219 ${time/10}%, #FFF2DF 100%)`
-		time ++
+		if (roundData.time > 1000) {
+			alert('you lost')
+			clearInterval(roundData.intervalId)
+		}
+		document.getElementById('hand').style.background = `linear-gradient(0deg, #FA9219 ${roundData.time/10}%, #FFF2DF 100%)`
+		roundData.time ++
 	}, 10)
-
-	return id
 }
+

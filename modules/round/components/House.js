@@ -1,5 +1,5 @@
-import { Card } from '../components/Card.js'
+import { Card } from './Card.js'
 
-export const cardsDealer = (roundData) => {
+export const House = roundData => {
 	roundData.housesValues.forEach(cardValue => Card(cardValue, cardValue < 0 ? 'negative-house' : 'positive-house', roundData))
 }

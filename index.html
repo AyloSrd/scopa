@@ -12,9 +12,9 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="./modules/round/components/Hand.js" type='module' defer></script>
 		<script src="./modules/round/components/Timer.js" type='module' defer></script>
-		<script src="./modules/round/hooks/randomizer.js" type='module' defer></script>
-		<script src="./modules/round/hooks/cardsDealer.js" type='module' defer></script>
-		<script src="./modules/round/hooks/cardCreator.js" type='module' defer></script>
+		<script src="./modules/round/hooks/useRandomizer.js" type='module' defer></script>
+		<script src="./modules/round/hooks/useCardCreator.js" type='module' defer></script>
+		<script src="./modules/round/components/House.js" type='module' defer></script>
 		<script src="./modules/round/components/Card.js" type='module' defer></script>
 		<script src="./modules/round/app.js" type='module' defer></script>
 	</head>
@@ -27,7 +27,14 @@
 				<div id="value">
 					<h1>?</h1>
 				</div>
-				<h3 id="result">?</h3>
+				<div class="displayed-data">
+					<div class="inner-diplayed-data">
+						<h3 id="result">?</h3>
+					</div>
+					<div class="inner-diplayed-data">
+						<h3 id="score">?</h3>
+					</div>
+				</div>
 			</div>
 			<div class="house" id="positive-house"></div>
 			<div class="house" id="negative-house"></div>

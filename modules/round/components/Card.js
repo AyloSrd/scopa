@@ -7,11 +7,12 @@ export const Card = ( val, house, roundData ) => {
 	card.setAttribute('active', used)
 	card.classList.add('card')
 	card.addEventListener('click', () => {
+		used = !used
+		card.setAttribute('value', used)
 		roundData.result += cardValue
 		document.getElementById('result').innerHTML = roundData.result
 		cardValue *= -1 
-		used = !used
-		card.setAttribute('active', used)
+		if (roundData.result === roundData.playersHand) roundData.hasFound = true
 	})
 	
 	document.getElementById(house).appendChild(card)
