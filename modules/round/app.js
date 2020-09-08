@@ -12,7 +12,8 @@ const roundData = {
 	playersHand: 0,
 	intervalId: 0,
 	time: 0,
-	hasFound: false
+	hasFound: false,
+	score: 0
 }
 
 const initialize = () => {
@@ -20,6 +21,8 @@ const initialize = () => {
 	Hand(roundData)
 	House(roundData)
 	document.querySelector('#value h1').innerHTML = roundData.playersHand
+	document.getElementById('score').innerHTML = roundData.score
+	document.getElementById('result').innerHTML = roundData.score
 	Timer(roundData)
 }
 
