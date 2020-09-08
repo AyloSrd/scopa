@@ -1,10 +1,14 @@
 import { useCalculateScore } from '../hooks/useCalculateScore.js'
+import { useClearRound } from '../hooks/useClearRound.js'
+import { Round } from '../Round.js'
 
 export const Timer = roundData => {
 	roundData.intervalId = setInterval(() => {
 		if(roundData.hasFound) {
 			alert('you won')
 			useCalculateScore(roundData)
+			useClearRound(roundData)
+			Round()
 			clearInterval(roundData.intervalId)
 		}
 		if (roundData.time > 1000) {

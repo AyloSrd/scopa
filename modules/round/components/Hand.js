@@ -2,7 +2,7 @@ import { useRandomizer } from '../hooks/useRandomizer.js'
 
 export const Hand = (roundData) => {
 	let addends = [...roundData.housesValues]
-	const tempArr = []
+	let tempArr = []
 	const minNumberOfCards = useRandomizer(2, 7)
 	for(let i = 0; i < minNumberOfCards; i++){
 		const k = useRandomizer(0, addends.length - 1)
@@ -10,4 +10,5 @@ export const Hand = (roundData) => {
 		addends.splice(k, 1)
 	}
 	roundData.playersHand = tempArr.reduce((acc, val) => acc + val, 0)
+	tempArr = []
 }
