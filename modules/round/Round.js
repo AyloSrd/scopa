@@ -12,7 +12,7 @@ export const Round = (roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE) => {
 		House(roundData)
 		document.querySelector('#value h1').innerHTML = roundData.playersHand
 		document.getElementById('result').innerHTML = roundData.result
-		Score(roundData)
+		Score(roundData, document.getElementById('score'))
 		Timer(roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE)
 	}
 
