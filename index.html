@@ -9,7 +9,11 @@
 		<title>Scopa</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-mobile.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="./modules/round/components/Hand.js" type='module' defer></script>
 		<script src="./modules/round/components/Timer.js" type='module' defer></script>
 		<script src="./modules/round/hooks/useRandomizer.js" type='module' defer></script>
@@ -25,22 +29,29 @@
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		
 		<div id='round'>
+			<div id="score-displayer">
+				<h3>Score : <span id="score">0</span></h3>
+			</div>
 			<div id="hand">
 				<div id="value">
-					<h1>?</h1>
+					<h1>0</h1>
 				</div>
-				<div class="displayed-data">
-					<div class="inner-diplayed-data">
-						<h3 id="result">?</h3>
-					</div>
-					<div class="inner-diplayed-data">
-						<h3 id="score">?</h3>
-					</div>
+				<div id="result-displayer">
+					<h3 id="result">0</h3>
 				</div>
 			</div>
-			<div class="house" id="positive-house"></div>
-			<div class="house" id="negative-house"></div>
+			<div id="houses-container">
+				<div class="house-intermediate-container">
+					<div class="operator"><i class="fa fa-plus" style="font-size:40px;color:white;text-align:center;"></i></div>
+					<div class="house" id="positive-house"></div>
+				</div>
+				<div class="house-intermediate-container">
+					<div class="operator"><i class="fa fa-minus" style="font-size:40px;color:white;text-align:center;"></i></div>
+					<div class="house" id="negative-house"></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

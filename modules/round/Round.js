@@ -4,20 +4,18 @@ import { House } from './components/House.js'
 import { Timer } from './components/Timer.js'
 import { Score } from './components/Score.js'
 
-export const Round = roundData => {
-	const HOUSES_CARDS = 10
-	const MAX_CARD_ABSOLUTE_VALUE = 20
+export const Round = (roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE) => {
 
-	const initialize = roundData => {
+	const initialize = (roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE) => {
 		useCardCreator(HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE, roundData)
 		Hand(roundData)
 		House(roundData)
 		document.querySelector('#value h1').innerHTML = roundData.playersHand
 		document.getElementById('result').innerHTML = roundData.result
 		Score(roundData)
-		Timer(roundData)
+		Timer(roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE)
 	}
 
-	initialize(roundData)
+	initialize(roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE)
 }
 
