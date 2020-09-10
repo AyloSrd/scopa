@@ -32,10 +32,41 @@
 		<![endif]-->
 		<div id="intro">
 			<div id="hero">
-				<h1>Scopa!</h1>
+				<div id="tiles-container">
+					<h1>Scopa<span>!</span></h1>
+					<h2>
+						Get fast at mental calculation.
+						<br>
+						Ten seconds at a time.
+					</h2>
+				</div>
+				<button id="scroll-down" onclick="document.getElementById('tutorials-container').scrollIntoView()"><i class="fa fa-angle-down" style="font-size:21px;color:white;text-align:center;"></i></button>
 			</div>
-			<div id="tutorial">
-				
+			<div id="tutorials-container">
+				<h2>Instructions</h2>
+				<div class="tutorial">
+					<div class="animation-box">
+						<div id="fake-timer">
+							<div id="fake-hand">
+								7
+							</div>
+						</div>
+					</div>
+					<p>Sum up the small numbers to obtain the value in the card, before it turns complitely blue. You have 10 seconds per round.</p>
+				</div>
+				<div class="tutorial">
+					<div class="animation-box">
+						<button id="fake-card" value="false">2</button>
+						<div id="fake-result">0</div>
+					</div>
+					<p>You can select and unselect the button just by clicking on it. Their value (positive or negative) will be added or removed from the result</p>		
+				</div>
+				<div class="tutorial">
+					<div class="animation-box">
+						<button id="play"><i class="fa fa-play" style="font-size:40px;color:white;text-align:center;"></i></button>
+					</div>
+					<p>You are now ready to play. Hit that play button ;)</p>						
+				</div>
 			</div>
 		</div>
 		<div id='round'>

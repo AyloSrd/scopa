@@ -1,2 +1,2 @@
 # scopa
-Mental calculation training. Minimal game based on scopa card game.
+Mental calculation training. Hyper-casual game based on Italian card game "Scopa".
