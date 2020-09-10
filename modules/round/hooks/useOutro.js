@@ -1,7 +1,14 @@
 import { useClearRound } from "./useClearRound.js"
-import { Outro } from "../../introOutro/components/Outro.js"
+import { Score } from "../components/Score.js"
 
 export const useOutro = roundData => {
+	const outro = document.getElementById('outro')
+	const round = document.getElementById('round')
 	useClearRound(roundData)
-	Outro()
+	outro.style.display = 'block'
+	outro.scrollIntoView()
+	round.style.display = 'none'
+	round.querySelector('h1').innerHTML = 0
+	outro.querySelector('span').innerHTML = 0
+	Score(roundData, outro.querySelector('span'))	
 }

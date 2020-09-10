@@ -14,8 +14,10 @@ const roundData = {
 }
 
 const round = document.getElementById('round')
+const outro = document.getElementById('outro')
 
 round.style.display = 'none'
+outro.style.display = 'none'
 
 const animateTutorial = setInterval(()=>{
 	let fakeCard = document.getElementById('fake-card')
@@ -35,6 +37,6 @@ const animateTutorial = setInterval(()=>{
 }, 3000)
 
 
-document.getElementById('play').addEventListener('click', () => {
+Array.from(document.getElementsByClassName('play')).forEach(btn => btn.addEventListener('click', () => {
 	usePlay(roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE, round, animateTutorial)
-})
+}))
