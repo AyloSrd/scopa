@@ -326,7 +326,7 @@ button {
 .play {
 	background-color: var(--secondary-main);
 	display: flex;
-	align-self: center;
+	align-items: center;
 	justify-content: center;
 }
 
