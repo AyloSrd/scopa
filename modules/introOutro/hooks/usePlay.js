@@ -3,7 +3,7 @@ import { useClearRound } from '../../round/hooks/useClearRound.js'
 
 export const usePlay = (roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE, round, animateTutorial) => {
 	useClearRound(roundData)
-	round.style.display = 'block'
+	round.style.display = 'grid'
 	setTimeout(() => round.scrollIntoView(), 500)
 	if (animateTutorial) clearInterval(animateTutorial)
 	if (document.getElementById('intro')) document.getElementById('intro').style.display = 'none'

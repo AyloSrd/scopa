@@ -2,7 +2,7 @@
 
 	/*Intro*/
 
-	#hero {
+	#hero, #outro {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -87,7 +87,8 @@
 		animation: faking-the-card 1s ease-in alternate infinite;
 	}
 
-	#play {
+	#play,
+	.play {
 		background-color: var(--secondary-main);
 		display: flex;
 		align-self: center;
@@ -162,6 +163,28 @@
 		width: 55px;
 		height: 55px;
 		font-size: 1.2rem;
+	}
+
+	/*outro*/
+
+	#outro {
+		background-image: url('./img/rvrs-mbl.jpg');
+		background-position: top; 
+		background-size: 100% 60vh; 
+		padding-bottom: 20px;
+	}
+
+	#outro {
+		color: white;
+	}
+
+	#outro span {
+		font-size: 3.5rem;
+		color: var(--secondary-main)
+	}
+
+	footer {
+		color: var(--text)
 	}
 
 }
