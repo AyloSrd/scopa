@@ -1,5 +1,24 @@
 @media only screen and (max-width: 600px) {
 
+	/*Intro*/
+
+	#hero {
+		display: flex;
+		height: 100vh;
+		background-color: white;
+		background-image: url('./img/bggr-mbl.jpg');
+		background-position: bottom; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: 100% 40vh; /* Resize the background image to cover the entire container */
+	}
+	
+	#hero h1 {
+		text-align: center;
+		font-size: 8rem;
+	}
+
+	/*round*/
+
 	#round {
 		display: flex;
 		flex-direction: column;
