@@ -30,81 +30,87 @@
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<div id="intro">
-			<div id="hero">
-				<div id="tiles-container">
-					<h1>Scopa<span>!</span></h1>
-					<h2>
-						Get fast at mental calculation.
-						<br>
-						Ten seconds at a time.
-					</h2>
+		<div id="intro-container">
+			<div id="intro">
+				<div id="hero">
+					<div id="tiles-container">
+						<h1>Scopa<span>!</span></h1>
+						<h2>
+							Get fast at mental calculation.
+							<br>
+							Ten seconds at a time.
+						</h2>
+					</div>
+					<button id="scroll-down" onclick="document.getElementById('tutorials-container').scrollIntoView()"><i class="fa fa-angle-down" style="font-size:21px;color:white;text-align:center;"></i></button>
 				</div>
-				<button id="scroll-down" onclick="document.getElementById('tutorials-container').scrollIntoView()"><i class="fa fa-angle-down" style="font-size:21px;color:white;text-align:center;"></i></button>
-			</div>
-			<div id="tutorials-container">
-				<h2>Instructions</h2>
-				<div class="tutorial">
-					<div class="animation-box">
-						<div id="fake-timer">
-							<div id="fake-hand">
-								7
+				<div id="tutorials-container">
+					<h2>Instructions</h2>
+					<div class="tutorial">
+						<div class="animation-box">
+							<div id="fake-timer">
+								<div id="fake-hand">
+									7
+								</div>
 							</div>
 						</div>
+						<p>Sum up the small numbers to obtain the value in the card, before it turns complitely blue. You have 10 seconds per round.</p>
 					</div>
-					<p>Sum up the small numbers to obtain the value in the card, before it turns complitely blue. You have 10 seconds per round.</p>
-				</div>
-				<div class="tutorial">
-					<div class="animation-box">
-						<button id="fake-card" value="false">2</button>
-						<div id="fake-result">0</div>
+					<div class="tutorial">
+						<div class="animation-box">
+							<button id="fake-card" value="false">2</button>
+							<div id="fake-result">0</div>
+						</div>
+						<p>You can select and unselect the button just by clicking on it. Their value (positive or negative) will be added or removed from the result</p>		
 					</div>
-					<p>You can select and unselect the button just by clicking on it. Their value (positive or negative) will be added or removed from the result</p>		
-				</div>
-				<div class="tutorial">
-					<div class="animation-box">
-						<button class ="play" id="play"><i class="fa fa-play" style="font-size:40px;color:white;text-align:center;"></i></button>
+					<div class="tutorial">
+						<div class="animation-box">
+							<button class ="play" id="play"><i class="fa fa-play" style="font-size:40px;color:white;text-align:center;"></i></button>
+						</div>
+						<p>You are now ready to play. Hit that play button ;)</p>						
 					</div>
-					<p>You are now ready to play. Hit that play button ;)</p>						
 				</div>
 			</div>
 		</div>
-		<div id='round'>
-			<div id="score-displayer">
-				<h3>Score : <span id="score">0</span></h3>
-			</div>
-			<div id="hand">
-				<div id="value">
-					<h1>0</h1>
+		<div id="round-container">
+			<div id='round'>
+				<div id="score-displayer">
+					<h3>Score : <span id="score">0</span></h3>
 				</div>
-				<div id="result-displayer">
-					<h3 id="result">0</h3>
+				<div id="hand">
+					<div id="value">
+						<h1>0</h1>
+					</div>
+					<div id="result-displayer">
+						<h3 id="result">0</h3>
+					</div>
 				</div>
-			</div>
-			<div id="houses-container">
-				<div class="house-intermediate-container">
-					<div class="operator"><i class="fa fa-plus" style="font-size:40px;color:white;text-align:center;"></i></div>
-					<div class="house" id="positive-house"></div>
-				</div>
-				<div class="house-intermediate-container">
-					<div class="operator"><i class="fa fa-minus" style="font-size:40px;color:white;text-align:center;"></i></div>
-					<div class="house" id="negative-house"></div>
+				<div id="houses-container">
+					<div class="house-intermediate-container">
+						<div class="operator"><i class="fa fa-plus" style="font-size:40px;color:white;text-align:center;"></i></div>
+						<div class="house" id="positive-house"></div>
+					</div>
+					<div class="house-intermediate-container">
+						<div class="operator"><i class="fa fa-minus" style="font-size:40px;color:white;text-align:center;"></i></div>
+						<div class="house" id="negative-house"></div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="outro">
-			<div id="tiles-container">
-				<h1>Your score: <br> <span>0</span></h1>
-				<h2>
-					You can explose your records
-					<br>
-					Give yourself another try!
-				</h2>
+		<div id="outro-container">
+			<div id="outro">
+				<div id="tiles-container">
+					<h1>Your score: <br> <span>0</span></h1>
+					<h2>
+						You can explose your records
+						<br>
+						Give yourself another try!
+					</h2>
+				</div>
+				<button class="play"><i class="fa fa-play" style="font-size:41px;color:white;text-align:center;"></i></button>
+				<footer>
+					Made with ♡ (but not for CSS) by Aÿlo
+				</footer>
 			</div>
-			<button class="play"><i class="fa fa-play" style="font-size:41px;color:white;text-align:center;"></i></button>
-			<footer>
-				Made with ♡ (but not for CSS) by Aÿlo
-			</footer>
 		</div>
 	</body>
 </html>

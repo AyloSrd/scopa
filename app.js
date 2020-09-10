@@ -13,8 +13,8 @@ const roundData = {
 	score: 0
 }
 
-const round = document.getElementById('round')
-const outro = document.getElementById('outro')
+const round = document.getElementById('round-container')
+const outro = document.getElementById('outro-container')
 
 round.style.display = 'none'
 outro.style.display = 'none'
