@@ -307,7 +307,9 @@ button {
 	animation: faking-the-timer 5s ease-in-out infinite;
 }
 
-#fake-hand, #play {
+#fake-hand, 
+#play,
+.play {
 	width: 100px;
 	height: 100px;
 	font-weight: 700;
@@ -336,6 +338,11 @@ button {
 	background-repeat: no-repeat; 
 	background-size: 100% 120vh; 
 	padding-bottom: 50px;
+}
+
+#outro span {
+	font-size: 4rem;
+	color: white;
 }
 
 

@@ -11,5 +11,5 @@ export const Score = (roundData, el) => {
 			el.innerHTML = oldScore
 			console.log(oldScore)
 		}
-	}, 100)
+	}, 20)
 }
