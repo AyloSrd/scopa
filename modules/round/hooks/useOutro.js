@@ -9,7 +9,7 @@ export const useOutro = roundData => {
 	outro.scrollIntoView()
 	setTimeout(() => {
 		round.style.display = 'none'
-	}, 1000)
+	}, 500)
 	round.querySelector('h1').innerHTML = 0
 	outro.querySelector('span').innerHTML = 0
 	Score(roundData, outro.querySelector('span'))	

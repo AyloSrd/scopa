@@ -1,5 +1,4 @@
 import { usePlay } from './modules/introOutro/hooks/usePlay.js'
-import { Round } from './modules/round/Round.js'
 
 const HOUSES_CARDS = 10
 const MAX_CARD_ABSOLUTE_VALUE = 20

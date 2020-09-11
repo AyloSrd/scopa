@@ -5,7 +5,6 @@ export const usePlay = (roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE, round,
 	useClearRound(roundData)
 	round.style.display = 'block'
 	round.scrollIntoView()
-	
 	setTimeout(() => {
 		if (animateTutorial) clearInterval(animateTutorial)
 		if (document.getElementById('intro-container')) document.getElementById('intro-container').style.display = 'none'
