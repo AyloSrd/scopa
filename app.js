@@ -38,5 +38,4 @@ const animateTutorial = setInterval(()=>{
 
 Array.from(document.getElementsByClassName('play')).forEach(btn => btn.addEventListener('click', () => {
 	usePlay(roundData, HOUSES_CARDS, MAX_CARD_ABSOLUTE_VALUE, round, animateTutorial)
-})) 
-let test5 = 'test'
+}))
